@@ -1,0 +1,29 @@
+<h1>Listing http_requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Ip</th>
+      <th>Address</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @http_requests.each do |http_request| %>
+      <tr>
+        <td><%= http_request.ip %></td>
+        <td><%= http_request.address %></td>
+        <td><%= link_to 'Show', http_request %></td>
+        <td><%= link_to 'Edit', edit_http_request_path(http_request) %></td>
+        <td><%= link_to 'Destroy', http_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Http request', new_http_request_path %>
