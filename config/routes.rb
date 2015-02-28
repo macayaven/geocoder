@@ -56,4 +56,5 @@ Geocoder::Application.routes.draw do
   #     resources :products
   #   end
   get 'location' => 'http_requests#find'
+  get 'safelocation' => 'http_requests#find_safe'
 end

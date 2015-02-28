@@ -66,6 +66,11 @@ class HttpRequestsController < ApplicationController
     render json:result
   end
 
+  def find_safe
+    result = request.safe_location
+    render json:result
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_http_request
